@@ -1,6 +1,6 @@
 CREATE TABLE BooksAuthors(
-AuthorId INT NOT NULL,
-BookId  INT NOT NULL,
+AuthorId INT NOT NULL, // curent table's foreign key
+BookId  INT NOT NULL, // curent table's foreign key
 FOREIGN KEY(AuthorId) REFERENCES Authors(Auth_Id),
 FOREIGN KEY(BookId) REFERENCES Books(Book_Id) 
 );
