@@ -54,4 +54,16 @@ ON Authors.Auth_Id = BooksAuthors.AuthorId
 JOIN Books
 ON Books.Book_Id = BooksAuthors.BookId
 ;
-# 
+# +-----------------+------------+------------------+--------------------------------+-----------------+------------------+--------------+----------------+
+| Last_Name       | First_Name | Phone_Number     | Email                          | Book_Title      | Publishers       | Publish_Date | Edition        |
++-----------------+------------+------------------+--------------------------------+-----------------+------------------+--------------+----------------+
+| Anowar Hossain  | Kazi       | 0118801679234751 | kazianowarhossain@gmail.com    | Kilar Cobra     | Sheba Prokashoni | 01/15/1972   | First Edition  |
+| Maimur Hossain  | Kazi       | 0118801769234751 | kazimaimurhossain@yahoo.com    | Durgom Jatra    | Sheba Prokashoni | 09/10/1971   | First Edition  |
+| Hassan          | Raqib      | 0118801672934751 | raqibhassan@hotmail.com        | Treasure Island | Sheba Prokashoni | 01/15/2010   | Third Edition  |
+| Shahnur Hossain | Kazi       | 0118801679234715 | kazishahnurhossain@hotmail.com | lorna Doon      | Sheba Prokashoni | 12/15/2000   | First Edition  |
+| Mahbub Hossain  | Kazi       | 0118801679237451 | kazimahbubhossain@gmail.com    | Uttaradhikar    | Sheba Prokashoni | 01/15/1995   | First Edition  |
+| Maowla Nyeem    | Golam      | 0118801679243751 | golammowlanyeem@yahoo.com      | Uttorshuri      | Sheba Prokashoni | 11/20/1985   | Second Edition |
+| Anowar          | Masud      | 0118801879234751 | masudanowar@gmail.com          | Tornedo Tax     | Sheba Prokashoni | 01/15/1975   | First Edition  |
++-----------------+------------+------------------+--------------------------------+-----------------+------------------+--------------+----------------+
+7 rows in set (0.01 sec)
+
