@@ -5,10 +5,15 @@ Publishers VARCHAR(100),
 Publish_Date VARCHAR(50) NOT NULL,
 Edition VARCHAR(50) NOT NULL
 );
-
-
-
-
+# mysql> DESCRIBE Books;
++-----------+---------------+------+-----+---------+----------------+
+| Field     | Type          | Null | Key | Default | Extra          |
++-----------+---------------+------+-----+---------+----------------+
+| BookId    | int(11)       | NO   | PRI | NULL    | auto_increment |
+| BookTitle | varchar(50)   | YES  |     | NULL    |                |
+| Price     | double(255,2) | YES  |     | NULL    |                |
++-----------+---------------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
 
 INSERT INTO Books(Book_Title,Publishers,Publish_Date,Edition) VALUES("Kilar Cobra","Sheba Prokashoni","01/15/1972","First Edition");
 INSERT INTO Books(Book_Title,Publishers,Publish_Date,Edition) VALUES("Durgom Jatra","Sheba Prokashoni","09/10/1971","First Edition");
@@ -17,3 +22,21 @@ INSERT INTO Books(Book_Title,Publishers,Publish_Date,Edition) VALUES("lorna Doon
 INSERT INTO Books(Book_Title,Publishers,Publish_Date,Edition) VALUES("Uttaradhikar","Sheba Prokashoni","01/15/1995","First Edition");
 INSERT INTO Books(Book_Title,Publishers,Publish_Date,Edition) VALUES("Uttorshuri","Sheba Prokashoni","11/20/1985","Second Edition");
 INSERT INTO Books(Book_Title,Publishers,Publish_Date,Edition) VALUES("Tornedo Tax","Sheba Prokashoni","01/15/1975","First Edition");
+
+# mysql> SELECT * FROM Books;
++--------+-------------------------+--------+
+| BookId | BookTitle               | Price  |
++--------+-------------------------+--------+
+|      1 | Sahih Bukhari           | 250.00 |
+|      2 | Sahih Muslim            | 220.00 |
+|      3 | Sunan Ibn Majah         | 180.00 |
+|      4 | Sunan Abu Dawood        | 200.00 |
+|      5 | Jami' at-Tirmidhi       | 190.00 |
+|      6 | Al-Sunan al-Sughra      | 170.00 |
+|      7 | Kitab al-Athar          | 120.00 |
+|      8 | Al-Muwatta              | 185.00 |
+|      9 | Musnad al-Shafi'i       | 135.00 |
+|     10 | Musnad Ahmad ibn Hanbal | 175.00 |
++--------+-------------------------+--------+
+10 rows in set (0.01 sec)
+
