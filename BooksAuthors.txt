@@ -1,0 +1,37 @@
+CREATE TABLE BooksAuthors(
+AuthorId INT NOT NULL,
+BookId  INT NOT NULL,
+FOREIGN KEY(AuthorId) REFERENCES Authors(Auth_Id),
+FOREIGN KEY(BookId) REFERENCES Books(Book_Id) 
+);
+
+
+
+
+INSERT INTO BooksAuthors(BookId,AuthorId) VALUES
+(1,101),
+(2,102),
+(3,103),
+(4,104),
+(5,105),
+(6,106),
+(7,107)
+;
+
+
+
+SELECT
+Authors.Last_Name,
+Authors.First_Name,
+Authors.Phone_Number,
+Authors.Email,
+Books.Book_Title,
+Books.Publishers,
+Books.Publish_Date,
+Books.Edition
+FROM Authors
+JOIN BooksAuthors
+ON Authors.Auth_Id = BooksAuthors.AuthorId
+JOIN Books
+ON Books.Book_Id = BooksAuthors.BookId
+;
