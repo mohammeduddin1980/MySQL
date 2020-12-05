@@ -4,9 +4,14 @@ BookId  INT NOT NULL,
 FOREIGN KEY(AuthorId) REFERENCES Authors(Auth_Id),
 FOREIGN KEY(BookId) REFERENCES Books(Book_Id) 
 );
-
-
-
+# mysql> DESCRIBE BooksAuthors;
++----------+---------+------+-----+---------+-------+
+| Field    | Type    | Null | Key | Default | Extra |
++----------+---------+------+-----+---------+-------+
+| AuthorId | int(11) | NO   | MUL | NULL    |       |
+| BookId   | int(11) | NO   | MUL | NULL    |       |
++----------+---------+------+-----+---------+-------+
+2 rows in set (0.01 sec)
 
 INSERT INTO BooksAuthors(BookId,AuthorId) VALUES
 (1,101),
@@ -17,8 +22,22 @@ INSERT INTO BooksAuthors(BookId,AuthorId) VALUES
 (6,106),
 (7,107)
 ;
-
-
+# mysql> SELECT * FROM BooksAuthors;
++----------+--------+
+| AuthorId | BookId |
++----------+--------+
+|      101 |      1 |
+|      102 |      2 |
+|      103 |      3 |
+|      104 |      4 |
+|      105 |      5 |
+|      106 |      6 |
+|      107 |      7 |
+|      108 |      8 |
+|      109 |      9 |
+|      110 |     10 |
++----------+--------+
+10 rows in set (0.00 sec)
 
 SELECT
 Authors.Last_Name,
@@ -35,3 +54,4 @@ ON Authors.Auth_Id = BooksAuthors.AuthorId
 JOIN Books
 ON Books.Book_Id = BooksAuthors.BookId
 ;
+# 
