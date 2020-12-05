@@ -5,10 +5,16 @@ Firs_Name VARCHAR(100),
 Phone_Number VARCHAR(50) NOT NULL,
 Email VARCHAR(50)
 );
+# mysql> DESCRIBE Authors;
++------------+-------------+------+-----+---------+----------------+
+| Field      | Type        | Null | Key | Default | Extra          |
++------------+-------------+------+-----+---------+----------------+
+| AuthorId   | int(11)     | NO   | PRI | NULL    | auto_increment |
+| AuthorName | varchar(50) | NO   |     | NULL    |                |
+| Country    | varchar(30) | NO   |     | NULL    |                |
++------------+-------------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
 
-
-
-  
 INSERT INTO Authors(Auth_Id,Last_Name,First_Name,Phone_Number,Email) VALUES(101,"Anowar Hossain","Kazi","0118801679234751","kazianowarhossain@gmail.com");
 INSERT INTO Authors(Last_Name,First_Name,Phone_Number,Email) VALUES("Maimur Hossain","Kazi","0118801769234751","kazimaimurhossain@yahoo.com");
 INSERT INTO Authors(Last_Name,First_Name,Phone_Number,Email) VALUES("Hassan","Raqib","0118801672934751","raqibhassan@hotmail.com");
@@ -17,6 +23,22 @@ INSERT INTO Authors(Last_Name,First_Name,Phone_Number,Email) VALUES("Mahbub Hoss
 INSERT INTO Authors(Last_Name,First_Name,Phone_Number,Email) VALUES("Maowla Nyeem","Golam","0118801679243751","golammowlanyeem@yahoo.com");
 INSERT INTO Authors(Last_Name,First_Name,Phone_Number,Email) VALUES("Anowar","Masud","0118801879234751","masudanowar@gmail.com");
 
+# mysql> SELECT * FROM Authors;
++----------+-----------------------+--------------+
+| AuthorId | AuthorName            | Country      |
++----------+-----------------------+--------------+
+|      101 | Muhammad al-Bukhari   | Uzbekistan   |
+|      102 | Muslim ibn al-Hajjaj  | Iran         |
+|      103 | Ibn Majah             | Iran         |
+|      104 | Abu Dawood            | Iran         |
+|      105 | Al-Tirmidhi           | Uzbekistan   |
+|      106 | Al-Nasa'i             | Turkmenistan |
+|      107 | Imam Abu Hanifa       | Iraq         |
+|      108 | Imam Malik ibn Anas   | Saudi Arabia |
+|      109 | Imam Shafi'i          | Palestine    |
+|      110 | Imam Ahmad ibn Hanbal | Iraq         |
++----------+-----------------------+--------------+
+10 rows in set (0.01 sec)
 
 
 
