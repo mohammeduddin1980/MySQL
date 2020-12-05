@@ -1,0 +1,19 @@
+CREATE TABLE Books(
+Book_ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+Book_Title VARCHAR(100) NOT NULL,
+Publishers VARCHAR(100),
+Publish_Date VARCHAR(50) NOT NULL,
+Edition VARCHAR(50) NOT NULL
+);
+
+
+
+
+
+INSERT INTO Books(Book_Title,Publishers,Publish_Date,Edition) VALUES("Kilar Cobra","Sheba Prokashoni","01/15/1972","First Edition");
+INSERT INTO Books(Book_Title,Publishers,Publish_Date,Edition) VALUES("Durgom Jatra","Sheba Prokashoni","09/10/1971","First Edition");
+INSERT INTO Books(Book_Title,Publishers,Publish_Date,Edition) VALUES("Treasure Island","Sheba Prokashoni","01/15/2010","Third Edition");
+INSERT INTO Books(Book_Title,Publishers,Publish_Date,Edition) VALUES("lorna Doon","Sheba Prokashoni","12/15/2000","First Edition");
+INSERT INTO Books(Book_Title,Publishers,Publish_Date,Edition) VALUES("Uttaradhikar","Sheba Prokashoni","01/15/1995","First Edition");
+INSERT INTO Books(Book_Title,Publishers,Publish_Date,Edition) VALUES("Uttorshuri","Sheba Prokashoni","11/20/1985","Second Edition");
+INSERT INTO Books(Book_Title,Publishers,Publish_Date,Edition) VALUES("Tornedo Tax","Sheba Prokashoni","01/15/1975","First Edition");
