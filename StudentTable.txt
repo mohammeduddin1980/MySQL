@@ -1,0 +1,78 @@
+CREATE TABLE Students(
+StudentId INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+LastName VARCHAR(100) NOT NULL,
+FirstName VARCHAR(100),
+Age INT NOT NULL,
+Gender VARCHAR(50) NOT NULL,
+PhoneNo VARCHAR(50),
+City VARCHAR(50),
+Country VARCHAR(50) NOT NULL
+);
+
+DESCRIBE Student;
+
+mysql> DESCRIBE Students;
++-----------+--------------+------+-----+---------+----------------+
+| Field     | Type         | Null | Key | Default | Extra          |
++-----------+--------------+------+-----+---------+----------------+
+| StudentId | int(11)      | NO   | PRI | NULL    | auto_increment |
+| LastName  | varchar(100) | NO   |     | NULL    |                |
+| FirstName | varchar(100) | YES  |     | NULL    |                |
+| Age       | int(11)      | NO   |     | NULL    |                |
+| Gender    | varchar(50)  | NO   |     | NULL    |                |
+| PhoneNo   | varchar(50)  | YES  |     | NULL    |                |
+| City      | varchar(50)  | YES  |     | NULL    |                |
+| Country   | varchar(50)  | NO   |     | NULL    |                |
++-----------+--------------+------+-----+---------+----------------+
+8 rows in set (0.00 sec)
+
+
+INSERT INTO Students(StudentId,LastName,FirstName,Age,Gender,PhoneNo,City,Country) VALUES (101,"Akbar","Ali",45,"Male","13472167284","Jamaica","USA");
+INSERT INTO Students(LastName,FirstName,Age,Gender,PhoneNo,City,Country) VALUES ("Anis","Mohammad",30,"Male","19176055801","Woodside","USA");
+INSERT INTO Students(LastName,FirstName,Age,Gender,PhoneNo,City,Country) VALUES ("Ahmed","Mahfuz",28,"Male","13473570373","Jackson Heights","USA");
+INSERT INTO Students(LastName,FirstName,Age,Gender,PhoneNo,City,Country) VALUES ("Masum","Md",26,"Male","13474997363","Corona","USA");
+INSERT INTO Students(LastName,FirstName,Age,Gender,PhoneNo,City,Country) VALUES ("Mosharrof","Md",40,"Male","16462070702","Long Island","USA");
+INSERT INTO Students(LastName,FirstName,Age,Gender,PhoneNo,City,Country) VALUES ("Khatoon","Most",35,"Male","16466431607","Long Island","USA");
+INSERT INTO Students(LastName,FirstName,Age,Gender,PhoneNo,City,Country) VALUES ("Al-Amin","Nur",38,"Male","19172844412","Jamaica","USA");
+INSERT INTO Students(LastName,FirstName,Age,Gender,PhoneNo,City,Country) VALUES ("Roy","Rupok",22,"Male","19292783870","Jackson Heights","USA");
+INSERT INTO Students(LastName,FirstName,Age,Gender,PhoneNo,City,Country) VALUES ("Shahadat","Md",30,"Male","15187689000","Jamaica","USA");
+INSERT INTO Students(LastName,FirstName,Age,Gender,PhoneNo,City,Country) VALUES ("Kamruzzaman","Md",45,"Male","19175007050","Jackson Heights","USA");
+INSERT INTO Students(LastName,FirstName,Age,Gender,PhoneNo,City,Country) VALUES ("Hossain","Mokabbel",40,"Male","19296025368","Coney Island","USA");
+INSERT INTO Students(LastName,FirstName,Age,Gender,PhoneNo,City,Country) VALUES ("Hasan","Khairul",20,"Male","0118801798712781","Dhaka","Bangladesh");
+INSERT INTO Students(LastName,FirstName,Age,Gender,PhoneNo,City,Country) VALUES ("Emama","Emama",30,"Female","13476495080","West Chester","USA");
+INSERT INTO Students(LastName,FirstName,Age,Gender,PhoneNo,City,Country) VALUES ("Akter","Farzana",30,"Female","13476595360","Brooklyn","USA");
+INSERT INTO Students(LastName,FirstName,Age,Gender,PhoneNo,City,Country) VALUES ("Adeena","Ayaz",30,"Female","13475067944","Bronx","USA");
+INSERT INTO Students(LastName,FirstName,Age,Gender,PhoneNo,City,Country) VALUES ("Fall","Golden",30,"Female","19293009015","Corona","USA");
+INSERT INTO Students(LastName,FirstName,Age,Gender,PhoneNo,City,Country) VALUES ("Sagar","Md",34,"Male","17167546078","New York","USA");
+INSERT INTO Students(LastName,FirstName,Age,Gender,PhoneNo,City,Country) VALUES ("Uddin","Main",40,"Male","0118801818460733","Feni","Bangladesh");
+INSERT INTO Students(LastName,FirstName,Age,Gender,PhoneNo,City,Country) VALUES ("Pintu","Moniruzzaman",40,"Male","0118801717095826","Dhaka","Bangladesh");
+
+SELECT * FROM Students;
+
+mysql> SELECT * FROM Students;
++-----------+-------------+--------------+-----+--------+------------------+-----------------+------------+
+| StudentId | LastName    | FirstName    | Age | Gender | PhoneNo          | City            | Country    |
++-----------+-------------+--------------+-----+--------+------------------+-----------------+------------+
+|       101 | Akbar       | Ali          |  45 | Male   | 13472167284      | Jamaica         | USA        |
+|       102 | Anis        | Mohammad     |  30 | Male   | 19176055801      | Woodside        | USA        |
+|       103 | Ahmed       | Mahfuz       |  28 | Male   | 13473570373      | Jackson Heights | USA        |
+|       104 | Masum       | Md           |  26 | Male   | 13474997363      | Corona          | USA        |
+|       105 | Mosharrof   | Md           |  40 | Male   | 16462070702      | Long Island     | USA        |
+|       106 | Khatoon     | Most         |  35 | Male   | 16466431607      | Long Island     | USA        |
+|       107 | Al-Amin     | Nur          |  38 | Male   | 19172844412      | Jamaica         | USA        |
+|       108 | Roy         | Rupok        |  22 | Male   | 19292783870      | Jackson Heights | USA        |
+|       109 | Shahadat    | Md           |  30 | Male   | 15187689000      | Jamaica         | USA        |
+|       110 | Kamruzzaman | Md           |  45 | Male   | 19175007050      | Jackson Heights | USA        |
+|       111 | Hossain     | Mokabbel     |  40 | Male   | 19296025368      | Coney Island    | USA        |
+|       112 | Hasan       | Khairul      |  20 | Male   | 0118801798712781 | Dhaka           | Bangladesh |
+|       113 | Emama       | Emama        |  30 | Female | 13476495080      | West Chester    | USA        |
+|       114 | Akter       | Farzana      |  30 | Female | 13476595360      | Brooklyn        | USA        |
+|       115 | Adeena      | Ayaz         |  30 | Female | 13475067944      | Bronx           | USA        |
+|       116 | Fall        | Golden       |  30 | Female | 19293009015      | Corona          | USA        |
+|       117 | Sagar       | Md           |  34 | Male   | 17167546078      | New York        | USA        |
+|       118 | Uddin       | Main         |  40 | Male   | 0118801818460733 | Feni            | Bangladesh |
+|       119 | Pintu       | Moniruzzaman |  40 | Male   | 0118801717095826 | Dhaka           | Bangladesh |
++-----------+-------------+--------------+-----+--------+------------------+-----------------+------------+
+19 rows in set (0.00 sec)
+
+
